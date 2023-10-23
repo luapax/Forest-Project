@@ -1,0 +1,22 @@
+@use "./colors";
+@use "./mixins";
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	min-height: 100vh;
+	background-color: #fff;
+	font-family: "Raleway", sans-serif;
+}
+
+nav .burger-btn {
+	display: none;
+}
