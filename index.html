@@ -14,26 +14,38 @@
 			href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600;700&display=swap"
 			rel="stylesheet"
 		/>
+		<link href="./dist/css/hamburgers.min.css" rel="stylesheet" />
+
 		<link rel="stylesheet" href="./dist/css/style.min.css" />
 	</head>
 	<body>
-		<nav class="nav">
-			<div class="logo">
-				<h1><i class="fa-solid fa-tree"></i> Forest</h1>
-			</div>
-			<button class="hamburger hamburger--spin" type="button">
+		<header class="header">
+			<button class="hamburger hamburger--collapse" type="button">
 				<span class="hamburger-box">
 					<span class="hamburger-inner"></span>
 				</span>
 			</button>
-			<div class="nav__items">
-				<a href="#home" class="nav__item">Home</a>
-				<a href="#aboutus" class="nav__item">O nas</a>
-				<a href="#offers" class="nav__item">Oferty</a>
-				<a href="#contact" class="nav__item">Kontakt</a>
-			</div>
-		</nav>
-		<header class="header">
+
+			<a class="logo" href="home" class="logo">
+				<h1><i class="fa-solid fa-tree"></i> <span>Forest</span></h1>
+			</a>
+
+			<nav class="nav nav-mobile">
+				<a href="#home" class="nav__link">Home</a>
+				<a href="#aboutus" class="nav__link">O nas</a>
+				<a href="#offers" class="nav__link">Oferty</a>
+				<a href="#contact" class="nav__link">Kontakt</a>
+			</nav>
+
+			<nav class="nav nav-desktop">
+				<a href="#home" class="nav__link">Home</a>
+				<a href="#aboutus" class="nav__link">O nas</a>
+				<a href="#offers" class="nav__link">Oferty</a>
+				<a href="#contact" class="nav__link">Kontakt</a>
+			</nav>
+		</header>
+
+		<!-- <header class="header">
 			<div class="header__hero-bg"></div>
 			<div class="header__hero-text">
 				<h3>Forest Group</h3>
@@ -170,12 +182,13 @@
 					</div>
 				</div>
 			</section>
-		</main>
+		</main> -->
 
 		<footer class="footer">
 			<div class="footer_bottom-text">
-				&copy; <span class="footer__year"></span> DG&M Corporation
+				&copy; <span class="footer__year"></span> Forest Group
 			</div>
 		</footer>
+		<script src="./dist/js/main.min.js"></script>
 	</body>
 </html>

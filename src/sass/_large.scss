@@ -1,0 +1,41 @@
+@use "./colors";
+
+@media (min-width: 992px) {
+	.header {
+		background-color: blue;
+		// display: flex;
+		// justify-content: space-around;
+		// flex-direction: column;
+		.nav {
+			//cos tu nie dziala
+			&-desktop {
+				display: block;
+			}
+
+			&-desktop {
+				display: block;
+				position: absolute;
+				top: 50%;
+				right: 10%;
+				height: 100%;
+				transform: translateY(-50%);
+				font-size: 0;
+			}
+			&__link {
+				margin: auto 0;
+				padding: 0 40px;
+				height: 100%;
+				font-size: 1.2rem;
+				line-height: 100px;
+				transition: background-color 0.3s, colors 0.3s;
+				&:hover {
+					background-color: colors.$black;
+					color: colors.$white;
+				}
+			}
+		}
+		.hamburger {
+			display: none;
+		}
+	}
+}
