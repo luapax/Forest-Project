@@ -8,8 +8,8 @@
 		// flex-direction: column;
 		.nav {
 			//cos tu nie dziala
-			&-desktop {
-				display: block;
+			&-mobile {
+				display: none;
 			}
 
 			&-desktop {
