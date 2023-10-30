@@ -154,9 +154,10 @@ main .hero {
 
 // ABOUT US SECTION
 .about-us {
+	margin: 40px 60px;
 	h1 {
-		margin: 30px;
-		font-size: 28px;
+		margin-bottom: 30px;
+		font-size: 34px;
 		text-transform: uppercase;
 		font-weight: 400;
 		text-align: center;
@@ -209,6 +210,7 @@ main .hero {
 		left: 50%;
 		text-wrap: nowrap;
 		padding: 15px 75px;
+		font-family: "Raleway", sans-serif;
 		font-size: 20px;
 		font-weight: 600;
 		transform: translate(-50%, -50%);
@@ -221,6 +223,91 @@ main .hero {
 		&:hover {
 			color: colors.$black;
 			background-color: rgba(255, 255, 255, 0.9);
+		}
+	}
+}
+
+// OFFERS
+.offers {
+	margin: 40px 60px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	h1 {
+		margin-bottom: 20px;
+		font-size: 34px;
+		text-transform: uppercase;
+		font-weight: 400;
+		text-align: center;
+	}
+	p {
+		font-size: 18px;
+	}
+	&__cards {
+		width: 100%;
+		margin-top: 20px;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-around;
+		align-items: center;
+		.offers__card {
+			margin: 30px 30px;
+			height: 400px;
+			width: 300px;
+			box-shadow: 5px 5px 8px 5px #2e2e2e2e;
+			display: flex;
+			flex-direction: column;
+
+			justify-content: space-evenly;
+			align-items: center;
+			border-radius: 8px;
+			&-title {
+				font-size: 26px;
+				font-weight: normal;
+			}
+			&-price {
+				font-size: 42px;
+				font-weight: 700;
+			}
+			&-info-list {
+				list-style: none;
+
+				&-item {
+					padding: 5px 0;
+					font-size: 18px;
+
+					.fa-check {
+						padding-right: 8px;
+						font-size: 14px;
+						color: colors.$green;
+					}
+					.fa-minus {
+						padding-right: 8px;
+						font-size: 14px;
+						color: colors.$grey;
+					}
+				}
+				&-item-inactive {
+					color: colors.$grey;
+				}
+			}
+			&-btn {
+				font-family: "Raleway", sans-serif;
+				padding: 10px 50px;
+				font-size: 18px;
+				background-color: transparent;
+				color: colors.$logo;
+				border: none;
+				border-radius: 8px;
+				box-shadow: 0 5px 10px 3px #2e2e2e2e;
+				transition: background-color 0.3s, color 0.3s;
+				cursor: pointer;
+				&:hover {
+					background-color: colors.$green;
+					color: colors.$black;
+				}
+			}
 		}
 	}
 }
@@ -272,8 +359,6 @@ main .hero {
 	}
 	.adventure {
 		&__button {
-			// font-weight: 500;
-			// padding: 25px 90px;
 			padding: 20px 100px;
 			font-size: 24px;
 		}
@@ -374,6 +459,40 @@ main .hero {
 			p {
 				font-size: 18px;
 				max-width: 80%;
+			}
+		}
+	}
+	.offers {
+		h1 {
+			font-size: 36px;
+		}
+		p {
+			font-size: 20px;
+		}
+		&__cards {
+			.offers__card {
+				height: 450px;
+				width: 350px;
+				&-title {
+					font-size: 28px;
+				}
+				&-price {
+					font-size: 44px;
+				}
+				&-info-list {
+					&-item {
+						font-size: 20px;
+
+						.fa-check,
+						.fa-minus {
+							font-size: 16px;
+						}
+					}
+				}
+				&-btn {
+					padding: 12px 60px;
+					font-size: 20px;
+				}
 			}
 		}
 	}
