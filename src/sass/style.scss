@@ -311,6 +311,60 @@ main .hero {
 		}
 	}
 }
+.footer {
+	background-color: colors.$light-grey;
+	&__section {
+		padding: 40px 20px;
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+
+		&-logo {
+			font-size: 24px;
+			.fa-tree {
+				color: colors.$logo;
+			}
+			span {
+				font-weight: 400;
+			}
+		}
+		&-nav {
+			display: flex;
+			// justify-content: flex-start;
+			align-items: flex-start;
+			// width: 50vw;
+			&__box {
+				padding: 0 30px;
+				display: flex;
+				flex-direction: column;
+				&-title {
+					padding-bottom: 15px;
+					font-size: 14px;
+					font-weight: 700;
+				}
+				&-item {
+					padding-bottom: 10px;
+					font-size: 10px;
+					text-decoration: none;
+					color: colors.$grey;
+				}
+			}
+		}
+	}
+
+	&__bottom {
+		&-hr {
+			height: 0.3px;
+			background-color: black;
+		}
+		&-text {
+			text-align: center;
+			padding: 20px 0px;
+			font-size: 10px;
+			color: colors.$grey;
+		}
+	}
+}
 
 //TEST
 
@@ -446,6 +500,30 @@ main .hero {
 			// padding: 25px 90px;
 			padding: 30px 150px;
 			font-size: 36px;
+		}
+	}
+}
+
+@media (min-width: 1200px) {
+	.footer {
+		background-color: colors.$light-grey;
+		&__section {
+			&-nav {
+				&__box {
+					&-title {
+						font-size: 16px;
+					}
+					&-item {
+						font-size: 12px;
+					}
+				}
+			}
+		}
+
+		&__bottom {
+			&-text {
+				font-size: 12px;
+			}
 		}
 	}
 }
