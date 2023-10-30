@@ -124,14 +124,14 @@ body {
 //HERO IMAGE SECTIOM
 main .hero {
 	position: relative;
+	height: 300px;
+	background-image: url(../img/header-small.jpg);
+	background-position: center 100%;
+	background-repeat: no-repeat;
 	&__bg {
+		height: 100%;
 		width: 100%;
-		height: 300px;
-		background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)),
-			url(../img/header-small.jpg);
-		background-position: center 100%;
-		background-size: 100%;
-		background-repeat: no-repeat;
+		background-color: rgba(0, 0, 0, 0.457);
 	}
 	&__text-box {
 		position: absolute;
@@ -191,18 +191,48 @@ main .hero {
 	}
 }
 
+// ADVENTURE SECTION
+.adventure {
+	position: relative;
+	height: 150px;
+	background-image: url(../img/girl-small.jpg);
+	background-position: center;
+	&__hero-bg {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0, 0, 0, 0.4);
+	}
+	&__button {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		text-wrap: nowrap;
+		padding: 15px 75px;
+		font-size: 20px;
+		font-weight: 600;
+		transform: translate(-50%, -50%);
+		background-color: rgba(0, 0, 0, 0.4);
+		border: 1px solid colors.$white;
+		color: colors.$white;
+		z-index: 100;
+		transition: background-color 0.3s, color 0.3s;
+		cursor: pointer;
+		&:hover {
+			color: colors.$black;
+			background-color: rgba(255, 255, 255, 0.9);
+		}
+	}
+}
+
 //TEST
 
 @media (min-width: 768px) {
 	main .hero {
-		&__bg {
-			width: 100%;
-			height: 400px;
-			background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)),
-				url(../img/header-large.jpg);
-			background-position: center 70%;
-			background-repeat: no-repeat;
-		}
+		height: 400px;
+		background-image: url(../img/header-large.jpg);
+		background-position: center 60%;
+		background-size: cover;
 		&__text-box {
 			position: absolute;
 			top: 50%;
@@ -238,6 +268,14 @@ main .hero {
 				font-size: 14px;
 				line-height: 25px;
 			}
+		}
+	}
+	.adventure {
+		&__button {
+			// font-weight: 500;
+			// padding: 25px 90px;
+			padding: 20px 100px;
+			font-size: 24px;
 		}
 	}
 }
@@ -283,6 +321,7 @@ main .hero {
 		}
 	}
 	.about-us {
+		margin-bottom: 70px;
 		h1 {
 			margin-top: 40px;
 			font-size: 36px;
@@ -308,9 +347,20 @@ main .hero {
 			}
 			p {
 				font-size: 16px;
-
 				line-height: 25px;
 			}
+		}
+	}
+	.adventure {
+		height: 250px;
+		background-image: url(../img/girl-large.jpg);
+		background-position: center;
+		background-size: cover;
+		&__button {
+			font-weight: 500;
+			// padding: 25px 90px;
+			padding: 30px 150px;
+			font-size: 36px;
 		}
 	}
 }
