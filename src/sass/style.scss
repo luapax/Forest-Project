@@ -28,10 +28,22 @@ body {
 	}
 }
 
+.section-scroll {
+	scroll-margin-top: 40px;
+}
+
 .header {
-	position: relative;
+	position: sticky;
+	top: 0;
 	height: 100px;
-	background: white;
+	background-color: white;
+	// background-color: pink;
+	z-index: 1000;
+
+	&.sticky-header {
+		// background-color: blue;
+		box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.194);
+	}
 
 	.logo {
 		position: absolute;
@@ -118,6 +130,10 @@ body {
 			}
 		}
 	}
+}
+
+.header .sticky-header {
+	background-color: red;
 }
 
 //MAIN
@@ -219,11 +235,6 @@ main .hero {
 		color: colors.$white;
 		z-index: 100;
 		transition: background-color 0.3s, color 0.3s;
-		cursor: pointer;
-		&:hover {
-			color: colors.$black;
-			background-color: rgba(255, 255, 255, 0.9);
-		}
 	}
 }
 

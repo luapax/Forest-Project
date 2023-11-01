@@ -27,7 +27,8 @@
   },
   "dependencies": {
     "gulp-sourcemaps": "^3.0.0",
-    "hamburgers": "^1.2.1"
+    "hamburgers": "^1.2.1",
+    "simple-scrollspy": "^2.4.0"
   },
   "description": ""
 }

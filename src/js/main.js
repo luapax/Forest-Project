@@ -17,3 +17,10 @@ const handleNav = () => {
 
 handleCurrentYear();
 navBtn.addEventListener("click", handleNav);
+
+window.addEventListener("scroll", () => {
+	const header = document.querySelector(".header");
+	if (window.scrollY > 0) {
+		header.classList.toggle("sticky-header", window.scrollY > 0);
+	}
+});
