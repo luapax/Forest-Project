@@ -29,7 +29,7 @@ body {
 }
 
 .section-scroll {
-	scroll-margin-top: 40px;
+	scroll-margin-top: 140px;
 }
 
 .header {
@@ -262,6 +262,7 @@ main .hero {
 		flex-wrap: wrap;
 		justify-content: space-around;
 		align-items: center;
+		overflow: hidden;
 		.offers__card {
 			margin: 30px 30px;
 			height: 400px;
@@ -273,6 +274,17 @@ main .hero {
 			justify-content: space-evenly;
 			align-items: center;
 			border-radius: 8px;
+
+			&.slide-in-down {
+				animation: 0.5s linear slide-in-down forwards;
+				transform: translateY(105%);
+			}
+
+			&.slide-in-up {
+				animation: 0.5s linear slide-in-up forwards;
+				transform: translateY(-105%);
+			}
+
 			&-title {
 				font-size: 26px;
 				font-weight: normal;
@@ -584,5 +596,35 @@ main .hero {
 				}
 			}
 		}
+	}
+}
+
+@keyframes slide-in-down {
+	from {
+		transform: translateY(100%);
+	}
+	// 25% {
+	// 	transform: translateY(60%);
+	// }
+	// 75% {
+	// 	transform: translateY(30%);
+	// }
+	to {
+		transform: translateY(0);
+	}
+}
+
+@keyframes slide-in-up {
+	from {
+		transform: translateY(-105%);
+	}
+	// 25% {
+	// 	transform: translateY(60%);
+	// }
+	// 75% {
+	// 	transform: translateY(30%);
+	// }
+	to {
+		transform: translateY(0);
 	}
 }
