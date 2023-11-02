@@ -24,3 +24,21 @@ window.addEventListener("scroll", () => {
 		header.classList.toggle("sticky-header", window.scrollY > 0);
 	}
 });
+
+const sectionCards = document.querySelector(".offers__cards");
+const sectionSlideDown = document.querySelectorAll(".offers__card-down");
+const sectionSlideUp = document.querySelector(".offers__card-up");
+
+const observer = new IntersectionObserver((entries) => {
+	entries.forEach((entry) => {
+		if (entry.isIntersecting) {
+			sectionSlideUp.classList.add("slide-in-up");
+			sectionSlideDown.forEach((item) => {
+				item.classList.add("slide-in-down");
+			});
+			observer.unobserve(entry.target);
+		}
+	});
+});
+
+observer.observe(sectionCards);
