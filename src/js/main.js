@@ -18,12 +18,12 @@ const handleNav = () => {
 handleCurrentYear();
 navBtn.addEventListener("click", handleNav);
 
-window.addEventListener("scroll", () => {
-	const header = document.querySelector(".header");
-	if (window.scrollY > 0) {
-		header.classList.toggle("sticky-header", window.scrollY > 0);
-	}
-});
+// window.addEventListener("scroll", () => {
+// 	const header = document.querySelector(".header");
+// 	if (window.scrollY > 0) {
+// 		header.classList.toggle("sticky-header", window.scrollY > 0);
+// 	}
+// });
 
 const sectionCards = document.querySelector(".offers__cards");
 const sectionSlideDown = document.querySelectorAll(".offers__card-down");

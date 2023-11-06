@@ -8,6 +8,7 @@
 			src="https://kit.fontawesome.com/bf215725e5.js"
 			crossorigin="anonymous"
 		></script>
+
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
@@ -21,12 +22,30 @@
 	<body>
 		<!-- @include 'nav.kit' -->
 
-		
-			<section class="contact-page">
-<h1>Tutaj bedzie formulatto na strone</h1>
-           
-			</section>
-		</main>
+		<section class="contact-page">
+			<h1 class="contact-page__title">Kontakt</h1>
+			<div class="contact-page__content">
+				<form action="" class="contact-page__content-form">
+					<label for="name">Imię</label>
+					<input type="text" id="name" />
+
+					<label for="surname">Nazwisko</label>
+					<input type="text" id="surname" />
+
+					<label for="email">Email</label>
+					<input type="text" id="email" />
+
+					<label for="message">Treść Wiadomości</label>
+					<textarea name="" id="message" cols="30" rows="10"></textarea>
+				</form>
+				<iframe
+					src="https://maps.google.com/maps?q=50.088350496457004,%2019.892822739739024&amp;t=&amp;z=16&amp;ie=UTF8&amp;iwloc=&amp;output=embed"
+					frameborder="0"
+					scrolling="no"
+					style="width: 100%; height: 100%"
+				></iframe>
+			</div>
+		</section>
 
 		<!-- @include 'footer.kit' -->
 		<script src="./dist/js/main.min.js"></script>
