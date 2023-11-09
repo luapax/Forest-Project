@@ -449,8 +449,9 @@ main .hero {
 
 //CONTACT SECTION
 .contact-page {
+	height: 800px;
 	&__title {
-		margin: 40px;
+		margin: 40px 0 80px 0;
 		font-size: 34px;
 		text-transform: uppercase;
 		font-weight: 400;
@@ -466,17 +467,59 @@ main .hero {
 
 		&-form {
 			margin: 20px 0;
-			padding: 10px 20px;
-			width: 100%;
+			padding: 30px 30px;
+			height: 600px;
+			width: 400px;
 			display: flex;
 			flex-direction: column;
-			background-color: lightgoldenrodyellow;
+			justify-content: center;
+			border-radius: 5px;
+			background-color: #dbdbdb1b;
+
+			box-shadow: 1px 1px 5px grey;
 			& input {
-				padding: 10px 20px;
-				// border-radius: 5px;
+				margin-bottom: 10px;
+				padding: 8px 10px;
+				border-radius: 5px;
+				border: 0.5px solid grey;
+				box-shadow: 1px 1px 1px black;
+				background-color: #ffffff;
 			}
 			& label {
-				margin-top: 10px;
+				margin: 10px 0 5px 0;
+				font-weight: 600;
+				font-size: 15px;
+			}
+			& textarea {
+				max-width: 100%;
+				min-width: 100%;
+				max-height: 700px;
+				border-radius: 5px;
+				border: 0.5px solid grey;
+				box-shadow: 1px 1px 1px black;
+			}
+
+			& button {
+				margin-top: 30px;
+				padding: 10px 20px;
+				width: 150px;
+				font-weight: 600;
+				letter-spacing: 0.5px;
+				align-self: flex-start;
+
+				font-family: "Raleway", sans-serif;
+				font-size: 16px;
+				background-color: #2ade72c8;
+				color: colors.$logo;
+				border: none;
+				border-radius: 8px;
+				box-shadow: 0 5px 10px 3px #2e2e2e2e;
+				transition: background-color 0.3s, color 0.3s;
+				cursor: pointer;
+				&:hover {
+					background-color: colors.$green;
+					color: colors.$black;
+				}
 			}
 		}
 	}
@@ -682,6 +725,38 @@ main .hero {
 				width: 40%;
 				&__title {
 					margin-bottom: 20px;
+				}
+			}
+		}
+	}
+
+	.contact-page {
+		height: 720px;
+		max-width: 1600px;
+		margin: 0 auto;
+
+		&__title {
+			margin: 40px 0;
+			font-size: 36px;
+		}
+
+		&__content {
+			margin: 0 auto;
+			flex-direction: row-reverse;
+
+			max-width: 1400px;
+
+			&-form {
+				margin: 0 40px;
+				width: 600px;
+				justify-content: space-around;
+
+				& label {
+					font-size: 18px;
+				}
+
+				& button {
+					font-size: 18px;
 				}
 			}
 		}

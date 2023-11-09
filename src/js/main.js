@@ -1,5 +1,7 @@
 const navMobile = document.querySelector(".nav-mobile");
 const navBtn = document.querySelector(".hamburger");
+const navMobileBtn = document.querySelectorAll(".nav__link");
+
 const footerYear = document.querySelector(".footer__year");
 const body = document.querySelector("body");
 
@@ -17,6 +19,11 @@ const handleNav = () => {
 
 handleCurrentYear();
 navBtn.addEventListener("click", handleNav);
+navMobileBtn.forEach((btn) =>
+	btn.addEventListener("click", () => {
+		navMobile.classList.remove("nav-mobile-active");
+	})
+);
 
 // window.addEventListener("scroll", () => {
 // 	const header = document.querySelector(".header");
