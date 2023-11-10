@@ -339,7 +339,7 @@ main .hero {
 		align-items: center;
 
 		&-logo {
-			font-size: 24px;
+			font-size: 16px;
 			.fa-tree {
 				color: colors.$logo;
 			}
@@ -353,7 +353,7 @@ main .hero {
 			align-items: flex-start;
 			// width: 50vw;
 			&__box {
-				padding: 0 30px;
+				padding: 0 15px;
 				display: flex;
 				flex-direction: column;
 				&-title {
@@ -450,8 +450,11 @@ main .hero {
 //CONTACT SECTION
 .contact-page {
 	height: 800px;
+	margin-bottom: 50px;
+
 	&__title {
-		margin: 40px 0 80px 0;
+		background-color: white;
+		margin: 40px 0 120px 0;
 		font-size: 34px;
 		text-transform: uppercase;
 		font-weight: 400;
@@ -459,6 +462,8 @@ main .hero {
 	}
 
 	&__content {
+		// padding: 20px;
+
 		height: 600px;
 		display: flex;
 		flex-direction: column;
@@ -467,57 +472,76 @@ main .hero {
 
 		&-form {
 			margin: 20px 0;
-			padding: 30px 30px;
-			height: 600px;
+			padding: 30px;
+			height: 640px;
 			width: 400px;
 			display: flex;
 			flex-direction: column;
 			justify-content: center;
-			border-radius: 5px;
-			background-color: #dbdbdb1b;
+			border-radius: 8px;
+			box-shadow: 5px 5px 8px 5px #2e2e2e2e;
 
-			box-shadow: 1px 1px 5px grey;
+			&__text {
+				text-align: center;
+				font-size: 20px;
+			}
+
 			& input {
-				margin-bottom: 10px;
-				padding: 8px 10px;
-				border-radius: 5px;
-				border: 0.5px solid grey;
-				box-shadow: 1px 1px 1px black;
-				background-color: #ffffff;
+				// margin-bottom: 10px;
+				padding: 12px 5px;
+				// border-radius: 8px;
+				// border: 0.5px solid grey;
+				// box-shadow: 1px 1px 1px black;
+				// background-color: #aba4a4;
+				background-color: colors.$light-grey;
+				border: transparent;
+				padding-left: 10px;
+
+				&:focus {
+					background-color: #fff;
+				}
 			}
 			& label {
-				margin: 10px 0 5px 0;
+				margin-top: 20px;
 				font-weight: 600;
-				font-size: 15px;
+				font-size: 16px;
 			}
 			& textarea {
-				max-width: 100%;
+				padding: 10px;
+				max-width: 200px;
 				min-width: 100%;
 				max-height: 700px;
-				border-radius: 5px;
-				border: 0.5px solid grey;
-				box-shadow: 1px 1px 1px black;
+				min-height: 180px;
+				// border-radius: 5px;
+				background-color: colors.$light-grey;
+				border: none;
+				// border: 0.5px solid grey;
+				// box-shadow: 1px 1px 1px black;
+				&:focus {
+					background-color: #fff;
+				}
 			}
 
 			& button {
 				margin-top: 30px;
 				padding: 10px 20px;
 				width: 150px;
+				width: 100%;
 				font-weight: 600;
 				letter-spacing: 0.5px;
 				align-self: flex-start;
 
 				font-family: "Raleway", sans-serif;
 				font-size: 16px;
-				background-color: #2ade72c8;
-				color: colors.$logo;
+				background-color: colors.$green;
+				// color: colors.$logo;
 				border: none;
 				border-radius: 8px;
 				box-shadow: 0 5px 10px 3px #2e2e2e2e;
 				transition: background-color 0.3s, color 0.3s;
 				cursor: pointer;
 				&:hover {
-					background-color: colors.$green;
+					background-color: #31ff83;
 					color: colors.$black;
 				}
 			}
@@ -535,6 +559,19 @@ main .hero {
 			}
 			&-box {
 				width: 80%;
+			}
+		}
+	}
+	.footer {
+		background-color: colors.$light-grey;
+		&__section {
+			&-logo {
+				font-size: 24px;
+			}
+			&-nav {
+				&__box {
+					padding: 0 30px;
+				}
 			}
 		}
 	}
