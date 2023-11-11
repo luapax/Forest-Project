@@ -52,9 +52,11 @@
 
 			<div class="contact-page__content">
 				<form action="" class="contact-page__content-form">
+					<div class="contact-page__content-form__error error-msg"></div>
 					<p class="contact-page__content-form__text">
 						Zapraszamy do kontaktu poprzez formularz
 					</p>
+
 					<label for="name">Imię</label>
 					<input type="text" id="name" placeholder="Podaj swoje imię" />
 
@@ -62,11 +64,11 @@
 					<input type="text" id="surname" placeholder="Podaj swoje nazwisko" />
 
 					<label for="email">Email</label>
-					<input type="text" id="email" placeholder="Podaj swój adres email" />
+					<input type="email" id="email" placeholder="Podaj swój adres email" />
 
 					<label for="message">Treść Wiadomości</label>
 					<textarea name="" id="message" cols="30" rows="10"></textarea>
-					<button type="submit">Wyślij</button>
+					<button type="submit" class="submitBtn">Wyślij</button>
 				</form>
 				<iframe
 					src="https://maps.google.com/maps?q=50.088350496457004,%2019.892822739739024&amp;t=&amp;z=16&amp;ie=UTF8&amp;iwloc=&amp;output=embed"
