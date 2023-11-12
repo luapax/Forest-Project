@@ -37,6 +37,8 @@ console.log(errorMessage);
 
 const formValidation = (e) => {
 	e.preventDefault();
+	errorMessage.classList.remove("active");
+	errorMessage.classList.remove("sucess");
 	if (
 		inputName.value.trim().length < 1 ||
 		inputSurname.value.trim().length < 1 ||
@@ -49,11 +51,10 @@ const formValidation = (e) => {
 	} else if (!inputEmail.value.includes("@")) {
 		errorMessage.classList.add("active");
 		errorMessage.textContent = "Niepoprawny adres email";
-		console.log("nic eeeeeemail ma");
 	} else {
 		errorMessage.classList.remove("active");
-		errorMessage.textContent = "";
-		console.log("not ok");
+		errorMessage.classList.add("sucess");
+		errorMessage.textContent = "Twoja wiadomość została wysłana";
 	}
 };
 
