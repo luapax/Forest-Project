@@ -479,13 +479,18 @@ main .hero {
 				height: 30px;
 				font-size: 18px;
 				color: hsl(9, 100%, 64%);
-				border: none;
 
 				&.active {
 					display: flex;
 
 					border-bottom: 1px solid hsl(9, 100%, 64%);
 				}
+
+				&.sucess {
+					display: flex;
+					border-bottom: 1px solid hsl(123, 77%, 72%);
+
+					
 			}
 
 			& input {
