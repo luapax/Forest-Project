@@ -489,82 +489,81 @@ main .hero {
 				&.sucess {
 					display: flex;
 					border-bottom: 1px solid hsl(123, 77%, 72%);
-
-					
-			}
-
-			& input {
-				padding: 12px 5px;
-				background-color: colors.$light-grey;
-				border: transparent;
-				padding-left: 10px;
-
-				&:focus {
-					background-color: #fff;
 				}
-			}
-			& label {
-				margin-top: 20px;
-				font-weight: 600;
-				font-size: 16px;
-			}
-			& textarea {
-				padding: 10px;
-				max-width: 200px;
-				min-width: 100%;
-				max-height: 200px;
-				min-height: 100px;
-				height: 100px;
 
-				background-color: colors.$light-grey;
-				border: none;
+				& input {
+					padding: 12px 5px;
+					background-color: colors.$light-grey;
+					border: transparent;
+					padding-left: 10px;
 
-				&:focus {
-					background-color: #fff;
+					&:focus {
+						background-color: #fff;
+					}
 				}
-			}
+				& label {
+					margin-top: 20px;
+					font-weight: 600;
+					font-size: 16px;
+				}
+				& textarea {
+					padding: 10px;
+					max-width: 200px;
+					min-width: 100%;
+					max-height: 200px;
+					min-height: 100px;
+					height: 100px;
 
-			& button {
-				margin-top: 30px;
-				padding: 10px 20px;
-				width: 150px;
-				width: 100%;
-				font-weight: 600;
-				letter-spacing: 0.5px;
-				align-self: flex-start;
+					background-color: colors.$light-grey;
+					border: none;
 
-				font-family: "Raleway", sans-serif;
-				font-size: 16px;
-				background-color: colors.$green;
-				border: none;
-				border-radius: 8px;
-				box-shadow: 0 5px 10px 3px #2e2e2e2e;
-				transition: background-color 0.3s, color 0.3s;
-				cursor: pointer;
-				&:hover {
-					background-color: #31ff83;
-					color: colors.$black;
+					&:focus {
+						background-color: #fff;
+					}
+				}
+
+				& button {
+					margin-top: 30px;
+					padding: 10px 20px;
+					width: 150px;
+					width: 100%;
+					font-weight: 600;
+					letter-spacing: 0.5px;
+					align-self: flex-start;
+
+					font-family: "Raleway", sans-serif;
+					font-size: 16px;
+					background-color: colors.$green;
+					border: none;
+					border-radius: 8px;
+					box-shadow: 0 5px 10px 3px #2e2e2e2e;
+					transition: background-color 0.3s, color 0.3s;
+					cursor: pointer;
+					&:hover {
+						background-color: #31ff83;
+						color: colors.$black;
+					}
 				}
 			}
 		}
 	}
-}
-//ANIMATION
+	//ANIMATION
 
-@keyframes slide-in-down {
-	from {
-		transform: translateY(100%);
+	@keyframes slide-in-down {
+		from {
+			transform: translateY(100%);
+		}
+		to {
+			transform: translateY(0);
+		}
 	}
-	to {
-		transform: translateY(0);
-	}
-}
 
-@keyframes slide-in-up {
-	from {
-		transform: translateY(-105%);
-	}
-	to {
-		transform: translateY(0);
+	@keyframes slide-in-up {
+		from {
+			transform: translateY(-105%);
+		}
+		to {
+			transform: translateY(0);
+		}
 	}
 }
