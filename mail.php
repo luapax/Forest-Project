@@ -4,7 +4,7 @@ $name = $_POST['name'];
 $surname = $_POST['surname'];
 $from = $_POST['email'];
 $subject = "Wiadomość z formularza na stronie Project Forest";
-$to = 'agata.react@gmail.com'
+$to = 'agata.react@gmail.com';
 $message = $_POST['msg'];
 
 $txt = "Imię: " . $name . "\r\n" . "Email: " . $from . "\r\n" . "\r\n" . "Treść: " . $message;
