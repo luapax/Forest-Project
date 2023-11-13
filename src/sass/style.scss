@@ -1,9 +1,6 @@
 @use "./colors";
 @use "./mixins";
 @use "./hamburgers";
-@use "./small";
-@use "./medium";
-@use "./large";
 
 *,
 *::before,
@@ -155,7 +152,7 @@ main .hero {
 
 // ABOUT US SECTION
 .about-us {
-	margin: 40px 60px;
+	margin-top: 40px;
 	h1 {
 		margin-bottom: 30px;
 		font-size: 34px;
@@ -183,11 +180,13 @@ main .hero {
 			font-size: 20px;
 			font-weight: 800;
 			margin-bottom: 12px;
+			text-align: center;
 		}
 		p {
 			font-size: 14px;
 			line-height: 25px;
 			font-weight: 300;
+			text-align: justify;
 		}
 	}
 }
@@ -208,8 +207,9 @@ main .hero {
 		position: absolute;
 		top: 50%;
 		left: 50%;
+		width: 100%;
 		text-wrap: nowrap;
-		padding: 15px 75px;
+		padding: 15px 0;
 		font-family: "Raleway", sans-serif;
 		font-size: 20px;
 		font-weight: 600;
@@ -248,7 +248,7 @@ main .hero {
 		align-items: center;
 		overflow: hidden;
 		.offers__card {
-			margin: 30px 30px;
+			margin: 30px 10px;
 			height: 400px;
 			width: 300px;
 			box-shadow: 5px 5px 8px 5px #2e2e2e2e;
@@ -478,92 +478,411 @@ main .hero {
 				padding: 0px;
 				height: 30px;
 				font-size: 18px;
-				color: hsl(9, 100%, 64%);
 
 				&.active {
+					text-align: center;
 					display: flex;
-
+					color: hsl(9, 100%, 64%);
 					border-bottom: 1px solid hsl(9, 100%, 64%);
 				}
 
-				&.sucess {
+				&.success {
+					text-align: center;
 					display: flex;
+					color: hsl(123, 77%, 72%);
 					border-bottom: 1px solid hsl(123, 77%, 72%);
 				}
+			}
+			& input {
+				background-color: blue;
+				padding: 12px 5px;
+				background-color: colors.$light-grey;
+				border: transparent;
+				padding-left: 10px;
 
-				& input {
-					padding: 12px 5px;
-					background-color: colors.$light-grey;
-					border: transparent;
-					padding-left: 10px;
-
-					&:focus {
-						background-color: #fff;
-					}
+				&:focus {
+					background-color: #fff;
 				}
-				& label {
-					margin-top: 20px;
-					font-weight: 600;
-					font-size: 16px;
+			}
+			& label {
+				margin-top: 20px;
+				font-weight: 600;
+				font-size: 16px;
+			}
+			& textarea {
+				padding: 10px;
+				max-width: 200px;
+				min-width: 100%;
+				max-height: 200px;
+				min-height: 100px;
+				height: 100px;
+
+				background-color: colors.$light-grey;
+				border: none;
+
+				&:focus {
+					background-color: #fff;
 				}
-				& textarea {
-					padding: 10px;
-					max-width: 200px;
-					min-width: 100%;
-					max-height: 200px;
-					min-height: 100px;
-					height: 100px;
+			}
 
-					background-color: colors.$light-grey;
-					border: none;
+			& button {
+				margin-top: 30px;
+				padding: 10px 20px;
+				width: 150px;
+				width: 100%;
+				font-weight: 600;
+				letter-spacing: 0.5px;
+				align-self: flex-start;
 
-					&:focus {
-						background-color: #fff;
-					}
-				}
-
-				& button {
-					margin-top: 30px;
-					padding: 10px 20px;
-					width: 150px;
-					width: 100%;
-					font-weight: 600;
-					letter-spacing: 0.5px;
-					align-self: flex-start;
-
-					font-family: "Raleway", sans-serif;
-					font-size: 16px;
-					background-color: colors.$green;
-					border: none;
-					border-radius: 8px;
-					box-shadow: 0 5px 10px 3px #2e2e2e2e;
-					transition: background-color 0.3s, color 0.3s;
-					cursor: pointer;
-					&:hover {
-						background-color: #31ff83;
-						color: colors.$black;
-					}
+				font-family: "Raleway", sans-serif;
+				font-size: 16px;
+				background-color: colors.$green;
+				border: none;
+				border-radius: 8px;
+				box-shadow: 0 5px 10px 3px #2e2e2e2e;
+				transition: background-color 0.3s, color 0.3s;
+				cursor: pointer;
+				&:hover {
+					background-color: #31ff83;
+					color: colors.$black;
 				}
 			}
 		}
 	}
-	//ANIMATION
+}
 
-	@keyframes slide-in-down {
-		from {
-			transform: translateY(100%);
+@media screen and (min-width: 576px) {
+	.offer-page {
+		&__card {
+			&-img {
+				height: 300px;
+				width: 80%;
+			}
+			&-box {
+				width: 80%;
+			}
 		}
-		to {
-			transform: translateY(0);
+	}
+	.footer {
+		background-color: colors.$light-grey;
+		&__section {
+			&-logo {
+				font-size: 24px;
+			}
+			&-nav {
+				&__box {
+					padding: 0 30px;
+				}
+			}
+		}
+	}
+}
+@media screen and (min-width: 768px) {
+	main .hero {
+		height: 400px;
+		background-image: url(../img/header-large.jpg);
+		background-position: center 60%;
+		background-size: cover;
+		&__text-box {
+			position: absolute;
+			top: 50%;
+			left: 80px;
+			color: colors.$white;
+			transform: translateY(-50%);
+
+			&-title {
+				font-weight: 300;
+				font-size: 24px;
+			}
+
+			&-text {
+				font-weight: bold;
+				font-size: 36px;
+			}
+		}
+	}
+	.about-us {
+		&__img {
+			height: 330px;
+			width: 490px;
+			background-image: url(../img/waters-large.jpg);
+		}
+
+		&__text {
+			h3 {
+				font-size: 20px;
+				font-weight: 800;
+				margin-bottom: 12px;
+			}
+			p {
+				font-size: 14px;
+				line-height: 25px;
+			}
+		}
+	}
+	.adventure {
+		&__button {
+			padding: 20px 100px;
+			font-size: 24px;
 		}
 	}
 
-	@keyframes slide-in-up {
-		from {
-			transform: translateY(-105%);
+	.offer-page {
+		&__card {
+			&-img {
+				&.img-one {
+					background-image: url(../img/mother-large.jpg);
+				}
+
+				&.img-two {
+					background-image: url(../img/avenue-large.jpg);
+				}
+
+				&.img-three {
+					background-image: url(../img/team-spirit-large.jpg);
+				}
+
+				&.img-four {
+					background-image: url(../img/landscape-large.jpg);
+				}
+
+				&.img-five {
+					background-image: url(../img/raccoon-large.jpg);
+				}
+			}
 		}
-		to {
-			transform: translateY(0);
+	}
+}
+
+@media screen and (min-width: 992px) {
+	.header {
+		.nav {
+			&-mobile {
+				display: none;
+			}
+
+			&-desktop {
+				display: block;
+				position: absolute;
+				top: 50%;
+				right: 10%;
+				height: 100%;
+				transform: translateY(-50%);
+				font-size: 0;
+			}
+			&__link {
+				display: inline-block;
+				text-decoration: none;
+				color: colors.$black;
+				margin: auto 0;
+				padding: 0 40px;
+				height: 100%;
+				font-size: 1.2rem;
+				line-height: 100px;
+				transition: background-color 0.3s, colors 0.3s;
+				&:hover {
+					background-color: colors.$black;
+					color: colors.$white;
+				}
+			}
 		}
+		.hamburger {
+			display: none;
+		}
+	}
+	.about-us {
+		margin-bottom: 70px;
+		h1 {
+			margin-top: 40px;
+			font-size: 36px;
+		}
+		.wrapper {
+			flex-direction: row;
+			align-items: flex-start;
+			justify-content: space-evenly;
+			// margin: 0 50px;
+		}
+		&__img {
+			padding-right: 100px;
+			// height: 305px;
+		}
+
+		&__text {
+			max-width: 40%;
+			margin: 14px;
+			h3 {
+				font-size: 24px;
+				font-weight: 800;
+				margin-bottom: 12px;
+			}
+			p {
+				font-size: 16px;
+				line-height: 25px;
+			}
+		}
+	}
+	.adventure {
+		height: 250px;
+		background-image: url(../img/girl-large.jpg);
+		background-position: center;
+		background-size: cover;
+		&__button {
+			font-weight: 500;
+			// padding: 25px 90px;
+			padding: 30px 150px;
+			font-size: 36px;
+		}
+	}
+	.offer-page {
+		:nth-child(odd) {
+			flex-direction: row-reverse;
+		}
+		&__card {
+			flex-direction: row;
+			justify-content: space-evenly;
+			align-items: center;
+			width: 90%;
+
+			&-img {
+				height: 400px;
+				width: 50%;
+				margin: 20px 0;
+				// border-radius: 5px;
+			}
+			&-box {
+				// height: 300px;
+				padding: 35px;
+				border-radius: 10px;
+				box-shadow: 5px 5px 8px 5px #2e2e2e2e;
+				// width: 450px;
+				width: 40%;
+				&__title {
+					margin-bottom: 20px;
+				}
+			}
+		}
+	}
+
+	.contact-page {
+		height: 720px;
+		max-width: 1600px;
+		margin: 0 auto;
+
+		&__title {
+			margin: 40px 0;
+			font-size: 36px;
+		}
+
+		&__content {
+			margin: 0 auto;
+			flex-direction: row-reverse;
+
+			max-width: 1400px;
+
+			&-form {
+				margin: 0 40px;
+				width: 600px;
+				justify-content: space-around;
+
+				& label {
+					font-size: 18px;
+				}
+
+				& button {
+					font-size: 18px;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (min-width: 1200px) {
+	.footer {
+		background-color: colors.$light-grey;
+		&__section {
+			&-nav {
+				&__box {
+					&-title {
+						font-size: 16px;
+					}
+					&-item {
+						font-size: 12px;
+					}
+				}
+			}
+		}
+
+		&__bottom {
+			&-text {
+				font-size: 12px;
+			}
+		}
+	}
+}
+
+@media screen and (min-width: 1400px) {
+	.about-us {
+		&__text {
+			h3 {
+				font-size: 26px;
+			}
+			p {
+				font-size: 18px;
+				max-width: 80%;
+			}
+		}
+	}
+	.offers {
+		h1 {
+			font-size: 36px;
+		}
+		p {
+			font-size: 20px;
+		}
+		&__cards {
+			.offers__card {
+				height: 450px;
+				width: 350px;
+				&-title {
+					font-size: 28px;
+				}
+				&-price {
+					font-size: 44px;
+				}
+				&-info-list {
+					&-item {
+						font-size: 20px;
+
+						.fa-check,
+						.fa-minus {
+							font-size: 16px;
+						}
+					}
+				}
+				&-btn {
+					padding: 12px 60px;
+					font-size: 20px;
+				}
+			}
+		}
+	}
+}
+//ANIMATION
+
+@keyframes slide-in-down {
+	from {
+		transform: translateY(100%);
+	}
+	to {
+		transform: translateY(0);
+	}
+}
+
+@keyframes slide-in-up {
+	from {
+		transform: translateY(-105%);
+	}
+	to {
+		transform: translateY(0);
 	}
 }

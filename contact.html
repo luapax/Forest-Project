@@ -3,6 +3,7 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="robots" content="index follow max-image-preview:standard" />
 		<title>Forest Project</title>
 		<script
 			src="https://kit.fontawesome.com/bf215725e5.js"
@@ -51,23 +52,48 @@
 			<h1 class="contact-page__title">Kontakt</h1>
 
 			<div class="contact-page__content">
-				<form action="" class="contact-page__content-form">
+				<form
+					action="/mail.php"
+					method="post"
+					class="contact-page__content-form"
+				>
 					<div class="contact-page__content-form__error error-msg"></div>
 					<p class="contact-page__content-form__text">
 						Zapraszamy do kontaktu poprzez formularz
 					</p>
 
 					<label for="name">Imię</label>
-					<input type="text" id="name" placeholder="Podaj swoje imię" />
+					<input
+						type="text"
+						id="name"
+						name="name"
+						placeholder="Podaj swoje imię"
+					/>
 
 					<label for="surname">Nazwisko</label>
-					<input type="text" id="surname" placeholder="Podaj swoje nazwisko" />
+					<input
+						type="text"
+						id="surname"
+						name="surname"
+						placeholder="Podaj swoje nazwisko"
+					/>
 
 					<label for="email">Email</label>
-					<input type="email" id="email" placeholder="Podaj swój adres email" />
+					<input
+						type="email"
+						id="email"
+						name="email"
+						placeholder="Podaj swój adres email"
+					/>
 
 					<label for="message">Treść Wiadomości</label>
-					<textarea name="" id="message" cols="30" rows="10"></textarea>
+					<textarea
+						name=""
+						id="message"
+						name="msg"
+						cols="30"
+						rows="10"
+					></textarea>
 					<button type="submit" class="submitBtn">Wyślij</button>
 				</form>
 				<iframe

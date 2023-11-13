@@ -33,8 +33,6 @@ const message = document.querySelector("#message");
 const errorMessage = document.querySelector(".error-msg");
 const submitBtn = document.querySelector(".submitBtn");
 
-console.log(errorMessage);
-
 const formValidation = (e) => {
 	e.preventDefault();
 	errorMessage.classList.remove("active");
@@ -42,19 +40,33 @@ const formValidation = (e) => {
 	if (
 		inputName.value.trim().length < 1 ||
 		inputSurname.value.trim().length < 1 ||
-		message.value.trim().length < 1
+		message.value.trim().length < 1 ||
+		!inputEmail.value.includes("@")
 	) {
-		console.log("nic nieeee ma");
-
 		errorMessage.classList.add("active");
 		errorMessage.textContent = "Uzupełnij wszystkie pola";
-	} else if (!inputEmail.value.includes("@")) {
+
+		console.log("no git");
+	} else if (document.location.search === "?mail_status=error") {
 		errorMessage.classList.add("active");
-		errorMessage.textContent = "Niepoprawny adres email";
+		errorMessage.textContent = "Pojawił się problem z wysłaniem wiadomości";
+		console.log("no git no git");
+	} else if (document.location.search === "?mail_status=sent") {
+		errorMessage.classList.remove("active");
+		errorMessage.classList.add("success");
+		errorMessage.textContent = "Twoja wiadomość została wysłana";
+		console.log("git");
+		setTimeout(() => {
+			errorMessage.classList.remove("success");
+		}, 4000);
 	} else {
 		errorMessage.classList.remove("active");
-		errorMessage.classList.add("sucess");
-		errorMessage.textContent = "Twoja wiadomość została wysłana";
+		errorMessage.classList.add("success");
+		errorMessage.textContent = "Wiadomość została wysłana";
+		console.log("git");
+		setTimeout(() => {
+			errorMessage.classList.remove("success");
+		}, 4000);
 	}
 };
 
