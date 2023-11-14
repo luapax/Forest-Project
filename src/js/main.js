@@ -31,7 +31,6 @@ const inputSurname = document.querySelector("#surname");
 const inputEmail = document.querySelector("#email");
 const message = document.querySelector("#msg");
 const msgStatus = document.querySelector(".msg-status");
-const submitBtn = document.querySelector(".submitBtn");
 
 const formValidation = (e) => {
 	msgStatus.classList.remove("error");
@@ -53,7 +52,6 @@ const formValidation = (e) => {
 		return;
 	}
 };
-submitBtn.addEventListener("click", formValidation);
 
 // PHP FORM HANDLING
 if (document.location.search === "?mail_status=sent") {
