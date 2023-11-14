@@ -1,4 +1,4 @@
-// NAVIGATION MANAGER & YEAR
+// NAVIGATION & YEAR HANDLING
 
 const navMobile = document.querySelector(".nav-mobile");
 const navBtn = document.querySelector(".hamburger");
@@ -29,48 +29,51 @@ navMobileBtn.forEach((btn) =>
 const inputName = document.querySelector("#name");
 const inputSurname = document.querySelector("#surname");
 const inputEmail = document.querySelector("#email");
-const message = document.querySelector("#message");
-const errorMessage = document.querySelector(".error-msg");
+const message = document.querySelector("#msg");
+const msgStatus = document.querySelector(".msg-status");
 const submitBtn = document.querySelector(".submitBtn");
 
 const formValidation = (e) => {
-	e.preventDefault();
-	errorMessage.classList.remove("active");
-	errorMessage.classList.remove("sucess");
+	msgStatus.classList.remove("error");
+	msgStatus.classList.remove("sucess");
 	if (
 		inputName.value.trim().length < 1 ||
 		inputSurname.value.trim().length < 1 ||
 		message.value.trim().length < 1 ||
 		!inputEmail.value.includes("@")
 	) {
-		errorMessage.classList.add("active");
-		errorMessage.textContent = "Uzupełnij wszystkie pola";
+		e.preventDefault();
+		msgStatus.classList.add("error");
+		msgStatus.textContent = "Uzupełnij wszystkie pola";
 
-		console.log("no git");
-	} else if (document.location.search === "?mail_status=error") {
-		errorMessage.classList.add("active");
-		errorMessage.textContent = "Pojawił się problem z wysłaniem wiadomości";
-		console.log("no git no git");
-	} else if (document.location.search === "?mail_status=sent") {
-		errorMessage.classList.remove("active");
-		errorMessage.classList.add("success");
-		errorMessage.textContent = "Twoja wiadomość została wysłana";
-		console.log("git");
 		setTimeout(() => {
-			errorMessage.classList.remove("success");
-		}, 4000);
+			msgStatus.classList.remove("error");
+		}, 3000);
 	} else {
-		errorMessage.classList.remove("active");
-		errorMessage.classList.add("success");
-		errorMessage.textContent = "Wiadomość została wysłana";
-		console.log("git");
-		setTimeout(() => {
-			errorMessage.classList.remove("success");
-		}, 4000);
+		return;
 	}
 };
-
 submitBtn.addEventListener("click", formValidation);
+
+// PHP FORM HANDLING
+if (document.location.search === "?mail_status=sent") {
+	msgStatus.classList.add("success");
+	msgStatus.textContent = "Wiadomość wysłana!";
+
+	setTimeout(() => {
+		msgStatus.classList.remove("success");
+	}, 3000);
+}
+
+if (document.location.search === "?mail_status=error") {
+	msgStatus.classList.add("error");
+	msgStatus.textContent = "Wystąpił błąd.";
+	setTimeout(() => {
+		msgStatus.classList.remove("error");
+	}, 3000);
+}
+
+console.log("dziala2");
 
 // ANIMATION
 const sectionCards = document.querySelector(".offers__cards");

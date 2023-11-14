@@ -4,7 +4,7 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta name="robots" content="index follow max-image-preview:standard" />
-		<title>Forest Project</title>
+		<title>Forest Group Project | Najpiękniejszy park w Twojej okolicy!</title>
 		<script
 			src="https://kit.fontawesome.com/bf215725e5.js"
 			crossorigin="anonymous"
@@ -51,43 +51,53 @@
 		<section class="contact-page">
 			<h1 class="contact-page__title">Kontakt</h1>
 
+					<input type="email" id="email" name="email" required />
+
+					<label for="msg">Wiadomość:</label>
+					<textarea name="msg" id="msg" required></textarea>
+
+					<button type="submit" class="submitBtn">Wyślij</button>
+				</form> -->
 			<div class="contact-page__content">
 				<form
 					action="/mail.php"
 					method="post"
 					class="contact-page__content-form"
 				>
-					<div class="contact-page__content-form__error error-msg"></div>
+					<div class="contact-page__content-form__msg-status msg-status"></div>
 					<p class="contact-page__content-form__text">
 						Zapraszamy do kontaktu poprzez formularz
 					</p>
-
-					<label for="name">Imię</label>
+					<label for="name">Imię:</label>
 					<input
 						type="text"
 						id="name"
 						name="name"
 						placeholder="Podaj swoje imię"
+						required
 					/>
 
-					<label for="surname">Nazwisko</label>
+					<label for="surname">Imię2:</label>
 					<input
 						type="text"
 						id="surname"
 						name="surname"
 						placeholder="Podaj swoje nazwisko"
+						required
 					/>
 
-					<label for="email">Email</label>
+					<label for="email">Email:</label>
 					<input
 						type="email"
 						id="email"
 						name="email"
 						placeholder="Podaj swój adres email"
+						required
 					/>
 
-					<label for="message">Treść Wiadomości</label>
-					<textarea id="message" name="msg" cols="30" rows="10"></textarea>
+					<label for="msg">Wiadomość:</label>
+					<textarea name="msg" id="msg" required></textarea>
+
 					<button type="submit" class="submitBtn">Wyślij</button>
 				</form>
 				<iframe
