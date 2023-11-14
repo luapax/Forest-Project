@@ -73,8 +73,6 @@ if (document.location.search === "?mail_status=error") {
 	}, 3000);
 }
 
-console.log("dziala2");
-
 // ANIMATION
 const sectionCards = document.querySelector(".offers__cards");
 const sectionSlideDown = document.querySelectorAll(".offers__card-down");
